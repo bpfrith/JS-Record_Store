@@ -21,4 +21,48 @@ describe('Record Store', function(){
 
   });
 
+  describe('Inventory', function(){
+      beforeEach('Setup', function(){
+        recordStore = new RecordStore('Marks Majical Musical Menagerie', 'We built this city on rock and roll');
+      });
+
+      it('should start empty', function(){
+        assert.equal(0, recordStore.recordCount());
+      });
+
+      it('should be able to add records', function(){
+        recordStore.addRecord(record);
+        assert.equal(1, recordStore.recordCount());
+      });
+
+      it('should be able to list records', function(){
+        recordStore.addRecord(record);
+        assert.deepEqual(
+          [{title: 'Tubular Bells', artist: 'Mike Oldfield', price: 5.00}],
+          recordStore.listRecords());
+      });
+
+      it('should be able to list records', function(){
+        recordStore.addRecord(record);
+        recordStore.sellRecord(record);
+
+        assert.equal(0, recordStore.recordCount());
+        assert.equal(5.00, recordStore.balance);
+      });
+
+      it('should be able to report finances', function(){
+        recordStore.addRecord(record);
+        recordStore.addRecord(record);
+        recordStore.sellRecord(record);
+
+        var report = recordStore.financialReport();
+        assert.deepEqual({
+          balance: 5.00,
+          inventoryValue: 5.00,
+          totalValue: 10.00
+        }, report);
+      });
+      
+    });
+
 });
