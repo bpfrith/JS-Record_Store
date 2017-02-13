@@ -22,6 +22,7 @@ Part C
 Create a RecordCollector (or Customer) constructor who can buy and sell records.
 The RecordCollector should have cash that increase and decreases with buying and selling.
 The RecordCollector shouldn't be able to buy a Record if he can't afford it.
+
 Extension
 
 If you haven't already refactor your code to use enumeration throughout.
