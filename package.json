@@ -1,0 +1,14 @@
+{
+  "name": "js_record_store",
+  "version": "1.0.0",
+  "description": "JS Record Store",
+  "main": "Customer.js",
+  "scripts": {
+    "test": "mocha --reporter nyan specs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
