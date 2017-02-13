@@ -10,11 +10,13 @@ Create a Record object that has an Artist, Title and Price
 Create a Record Store that has a Name, City and an Inventory.
 Give the Record Store a Balance.
 Add some Records to the Store's Inventory.
+
 Part B
 
 Create a method that lists the inventory.
 Create a method so the Record Store can sell a Record and adjusts the Store's balance to account for the Record being sold.
 Create a method that reports the finnancial situation of the Store. Balance and value of inventory.
+
 Part C
 
 Create a RecordCollector (or Customer) constructor who can buy and sell records.
